@@ -1,0 +1,24 @@
+[
+    {
+        "id": "1",
+        "title": "极简电商App设计",
+        "category": "UI/UX设计",
+        "date": "2023年5月",
+        "client": "EcoShop",
+        "cover": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        "content": "<h2>项目概述</h2><p>这个项目的目标是为一家初创电子商务企业创建一个简洁、现代的移动应用程序，使用户能够轻松浏览和购买产品。该应用程序的设计理念是简约而不简单，注重视觉层次和用户体验。</p><blockquote>\"简约设计不是关于减少，而是关于找到完美平衡点。\"</blockquote><h2>挑战与解决方案</h2><p>项目的主要挑战是如何在有限的移动屏幕空间内展示丰富的产品信息，同时保持界面的简洁和易用性。为了解决这一挑战，我采用了以下策略：</p><ul><li>层次清晰的导航结构</li><li>简化的产品卡片设计</li><li>渐进式信息展示</li></ul><p>通过这些策略，我们成功地创建了一个既美观又实用的电商应用程序。</p>",
+        "createdAt": "2023-05-10T08:00:00.000Z",
+        "updatedAt": "2023-05-10T08:00:00.000Z"
+    },
+    {
+        "id": "2",
+        "title": "城市文化品牌形象",
+        "category": "品牌设计",
+        "date": "2023年3月",
+        "client": "CityBrand",
+        "cover": "https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        "content": "<h2>项目背景</h2><p>这个项目旨在为一个新兴的城市文化节创造一个独特的品牌形象，该文化节旨在展示城市的历史、艺术和创新精神。</p><h2>设计过程</h2><p>设计过程包括广泛的研究、概念开发和多轮反馈迭代：</p><ol><li>研究城市历史和文化背景</li><li>创建品牌概念和视觉语言</li><li>设计标志、色彩系统和排版</li><li>开发应用程序设计和营销材料</li></ol><h2>最终交付</h2><p>项目最终交付了一套完整的品牌标识系统，包括标志、色彩方案、字体系统、图案和应用实例。这些元素共同构成了一个连贯、独特的品牌形象，成功传达了城市文化的多元性和活力。</p>",
+        "createdAt": "2023-03-15T09:30:00.000Z",
+        "updatedAt": "2023-03-15T09:30:00.000Z"
+    }
+] 

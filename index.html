@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DK - 设计师作品集</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- 导航栏 -->
+    <header class="fixed w-full z-50 bg-white bg-opacity-90 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter">DK</a>
+            
+            <!-- 桌面导航 -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium hover:text-gray-500 transition-all">首页</a>
+                <a href="portfolio.html" class="font-medium hover:text-gray-500 transition-all">作品集</a>
+                <a href="#about" class="font-medium hover:text-gray-500 transition-all">关于</a>
+                <a href="#contact" class="font-medium hover:text-gray-500 transition-all">联系</a>
+            </nav>
+            
+            <!-- 移动端汉堡菜单 -->
+            <button class="md:hidden focus:outline-none" id="menuBtn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div class="md:hidden bg-white hidden" id="mobileMenu">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="font-medium hover:text-gray-500 transition-all">首页</a>
+                <a href="portfolio.html" class="font-medium hover:text-gray-500 transition-all">作品集</a>
+                <a href="#about" class="font-medium hover:text-gray-500 transition-all">关于</a>
+                <a href="#contact" class="font-medium hover:text-gray-500 transition-all">联系</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="parallax parallax-bg h-screen flex items-center justify-center" data-parallax="0.5" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" data-text-animate>创造独特的设计体验</h1>
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto" data-animate>专注于用户体验与视觉设计，打造令人惊艳的数字产品</p>
+            <a href="portfolio.html" class="btn-hover-effect inline-block bg-white text-gray-900 font-medium px-8 py-3 rounded-md transition-all" data-animate>查看作品</a>
+        </div>
+    </section>
+
+    <!-- 简介/关于区域 -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-gradient">关于我</h2>
+                <p class="text-lg leading-relaxed mb-6" data-scroll-animate="fade-in">Hii~ 我是D.K，一名8年项目设计经验的资深UI/UE设计师。擅长解决问题，工作贯穿概念/策略，设计到执行。</p>
+                <p class="text-lg leading-relaxed" data-scroll-animate="fade-in">实例项目经验丰富，智能家居设计作品曾荣获2022年德国iF奖。目前就职于全球TOP5加密货币交易所负责用户体验设计相关工作。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精选作品区域 -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" data-aos="fade-up">精选作品</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 作品项1 -->
+                <div class="project-card custom-shadow-hover rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <a href="portfolio-detail.html?id=1" class="block">
+                        <div class="img-hover-zoom relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="项目缩略图" class="w-full h-64 object-cover" data-fade-in>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">极简电商App设计</h3>
+                            <p class="text-gray-600">UI/UX设计 • 移动应用</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 作品项2 -->
+                <div class="project-card custom-shadow-hover rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <a href="portfolio-detail.html?id=2" class="block">
+                        <div class="img-hover-zoom relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="项目缩略图" class="w-full h-64 object-cover" data-fade-in>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">金融科技平台重设计</h3>
+                            <p class="text-gray-600">UI设计 • 网页应用</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 作品项3 -->
+                <div class="project-card custom-shadow-hover rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <a href="portfolio-detail.html?id=3" class="block">
+                        <div class="img-hover-zoom relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="项目缩略图" class="w-full h-64 object-cover" data-fade-in>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">健康监测应用程序</h3>
+                            <p class="text-gray-600">UI/UX设计 • 跨平台应用</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="portfolio.html" class="btn-hover-effect inline-block border-2 border-gray-800 text-gray-800 font-medium px-8 py-3 rounded-md transition-all" data-aos="fade-up">查看全部作品</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-2xl font-bold tracking-tighter">DK</a>
+                    <p class="mt-2 text-gray-400">设计构建更好的用户体验</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-all">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 DK设计工作室. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // 初始化AOS动画库
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true
+        });
+        
+        // 模拟从API获取项目数据
+        async function fetchProjects() {
+            try {
+                // 首先尝试从localStorage获取项目数据（后台添加的项目）
+                const storedProjects = localStorage.getItem('projects');
+                if (storedProjects) {
+                    return JSON.parse(storedProjects);
+                }
+                
+                // 如果没有从projects获取到，再尝试从模拟的API数据获取
+                const storedApiProjects = localStorage.getItem('apiProjects');
+                if (storedApiProjects) {
+                    return JSON.parse(storedApiProjects);
+                }
+                
+                // 如果没有模拟数据，尝试读取真实API
+                const response = await fetch('api/projects.json');
+                return await response.json();
+            } catch (error) {
+                console.error('获取项目数据失败:', error);
+                // 返回默认数据
+                return [
+                    {
+                        id: '1',
+                        title: '极简电商App设计',
+                        category: 'UI/UX设计',
+                        date: '2023年5月',
+                        client: 'EcoShop',
+                        cover: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+                    },
+                    {
+                        id: '2',
+                        title: '城市文化品牌形象',
+                        category: '品牌设计',
+                        date: '2023年3月',
+                        client: 'CityBrand',
+                        cover: 'https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+                    }
+                ];
+            }
+        }
+        
+        // 加载精选作品
+        document.addEventListener('DOMContentLoaded', async function() {
+            try {
+                // 从API获取项目数据
+                const projects = await fetchProjects();
+                
+                // 获取精选作品容器
+                const featuredWorksContainer = document.querySelector('.grid.grid-cols-1');
+                
+                // 清空容器
+                featuredWorksContainer.innerHTML = '';
+                
+                // 只显示前3个项目
+                const featuredProjects = projects.slice(0, 3);
+                
+                // 生成HTML并添加到容器
+                featuredProjects.forEach((project, index) => {
+                    const projectCard = document.createElement('div');
+                    projectCard.className = 'project-card custom-shadow-hover rounded-lg overflow-hidden';
+                    projectCard.setAttribute('data-aos', 'fade-up');
+                    projectCard.setAttribute('data-aos-delay', (index * 100).toString());
+                    
+                    projectCard.innerHTML = `
+                        <a href="portfolio-detail.html?id=${project.id}" class="block">
+                            <div class="img-hover-zoom relative overflow-hidden">
+                                <img src="${project.cover}" alt="${project.title}" class="w-full h-64 object-cover" data-fade-in>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">${project.title}</h3>
+                                <p class="text-gray-600">${project.category} • ${project.client}</p>
+                            </div>
+                        </a>
+                    `;
+                    
+                    featuredWorksContainer.appendChild(projectCard);
+                });
+            } catch (error) {
+                console.error('加载项目数据失败:', error);
+            }
+        });
+        
+        // 移动端菜单切换
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html> 
