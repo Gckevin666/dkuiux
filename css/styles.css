@@ -275,4 +275,170 @@
 
 .elegant-heading strong {
     font-weight: 600;
+}
+
+:root {
+    /* 主色调 */
+    --bg-primary: #000000;
+    --bg-secondary: #111111;
+    --bg-tertiary: #1a1a1a;
+    
+    /* 渐变色 */
+    --gradient-primary: linear-gradient(135deg, rgba(13,14,14,1) 0%, rgba(25,26,26,1) 100%);
+    --gradient-accent: linear-gradient(135deg, rgba(82,82,229,0.1) 0%, rgba(82,82,229,0) 100%);
+    --gradient-glow: linear-gradient(135deg, rgba(82,82,229,0.2) 0%, rgba(82,82,229,0) 50%);
+    
+    /* 文字颜色 */
+    --text-primary: rgba(255, 255, 255, 0.9);
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --text-tertiary: rgba(255, 255, 255, 0.4);
+    
+    /* 边框和阴影 */
+    --border-color: rgba(255, 255, 255, 0.1);
+    --glow-color: rgba(82, 82, 229, 0.15);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 全局样式 */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 添加微噪点背景纹理 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
+    z-index: -1;
+}
+
+/* 卡片样式 */
+.card {
+    background: var(--gradient-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 24px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px var(--glow-color);
+    transform: translateY(-2px);
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    background-color: white;
+    color: black;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* 导航栏样式 */
+nav {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* 文本渐变效果 */
+.gradient-text {
+    background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 流光动画 */
+@keyframes flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.flow-effect {
+    background: linear-gradient(270deg, var(--glow-color), transparent);
+    background-size: 200% 100%;
+    animation: flow 8s ease infinite;
+}
+
+/* 微动效 */
+@keyframes subtle-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.float-animation {
+    animation: subtle-float 4s ease-in-out infinite;
+}
+
+h2 {
+    line-height: 1.5;
+}
+
+.main-heading {
+    font-size: 3.5rem;
+    line-height: 1.25;
+    font-weight: bold;
+    background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2.25rem;
+    }
 } 
