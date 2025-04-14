@@ -127,7 +127,8 @@
                     return;
                 }
 
-                const projects = JSON.parse(localStorage.getItem('apiProjects')) || [];
+                const response = await fetch('data/projects.json');
+                const projects = await response.json();
                 const project = projects.find(p => p.id === projectId);
                 
                 if (!project) {

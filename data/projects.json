@@ -1,0 +1,11 @@
+[
+    {
+        "id": "example",
+        "title": "示例项目",
+        "category": "UI/UX设计",
+        "date": "2024",
+        "description": "这是一个示例项目",
+        "cover": "images/example-cover.jpg",
+        "content": "<p>这是示例项目的详细内容。</p>"
+    }
+] 
