@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 - DK设计师作品集</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <style>
+        .nav-offset {
+            padding-top: calc(96px + 120px); /* 导航栏高度(24px + 48px) + 所需间距120px */
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-bg-primary to-bg-secondary">
+    <!-- 导航栏 -->
+    <dk-header></dk-header>
+
+    <!-- 主要内容 -->
+    <main>
+        <!-- 个人简介 -->
+        <section class="nav-offset px-10 relative overflow-hidden">
+            <div class="absolute inset-0 flow-effect opacity-10"></div>
+            <div class="max-w-[2000px] mx-auto relative z-10">
+                <!-- 个人简介部分 -->
+                <div class="mb-32">
+                    <h1 class="main-heading fade-up max-w-[90%]">Hi! 我是D.K，拥有8年经验、荣获iF奖的UI/UX设计师，现于头部Web3公司，擅长融合数据、AI与跨界技术，将复杂前沿科技转化为直观高效的用户体验。</h1>
+                </div>
+
+                <!-- Being Transparent 部分 -->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-16 py-32">
+                    <div class="md:w-1/5">
+                        <div class="aspect-square w-full overflow-hidden rounded-2xl fade-up bg-neutral-100">
+                            <img src="https://dkuiux.oss-cn-beijing.aliyuncs.com/DK%E4%BD%9C%E5%93%81%E9%9B%86/cover.jpg" 
+                                 alt="联系封面" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex flex-col items-start">
+                        <h2 class="heading-lg mb-8 fade-up">如果你觉得我合适，我很乐意与你深入探讨。</h2>
+                        <a href="./contact.html" class="btn fade-up delay-200">
+                            联系我
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 我的工作 -->
+        <section class="py-24 px-10 bg-bg-secondary relative overflow-hidden">
+            <div class="absolute inset-0 flow-effect opacity-10"></div>
+            <div class="max-w-[2000px] mx-auto relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                    <div class="md:w-1/3">
+                        <h2 class="text-3xl font-bold gradient-text mb-6 fade-up">主要关注</h2>
+                    </div>
+                    <div class="md:w-1/2 flex flex-col gap-16">
+                        <!-- 主要介绍文本 -->
+                        <p class="text-text-secondary text-lg leading-relaxed fade-up">凭借多年的经验，我了解到所有公司，无论大小，都有一个共同的基本特征：以人为本。我深知，要想与受众建立联系，你必须真实有效地展现自己，才能触达合适的受众。</p>
+                        
+                        <!-- 两个子项目 -->
+                        <div class="grid md:grid-cols-2 gap-12">
+                            <div class="fade-up delay-200">
+                                <h3 class="text-2xl font-bold gradient-text mb-4">刻意保持小而美</h3>
+                                <p class="text-text-secondary text-lg">我与精心挑选的小型公司合作，帮助他们放大影响力，实现有意义的改变。</p>
+                            </div>
+                            <div class="fade-up delay-300">
+                                <h3 class="text-2xl font-bold gradient-text mb-4">协作共创</h3>
+                                <p class="text-text-secondary text-lg">我们共同创造不仅视觉出众，更能产生持久影响的设计。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <dk-footer></dk-footer>
+
+    <script>
+        // 初始化滚动动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-up');
+            
+            // 立即显示首屏元素
+            fadeElements.forEach(element => {
+                if (element.getBoundingClientRect().top < window.innerHeight) {
+                    element.classList.add('show');
+                }
+            });
+
+            // 监听滚动事件
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html> 

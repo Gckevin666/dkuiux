@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品详情 - DK设计师作品集</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="components/contact.js"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-bg-primary to-bg-secondary">
+    <!-- 导航栏 -->
+    <dk-header></dk-header>
+
+    <!-- 项目详情 -->
+    <main class="pt-32 pb-24">
+        <!-- 项目标题区域 -->
+        <section class="py-24">
+            <div class="px-10">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                    <div class="md:w-1/2 w-full">
+                        <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-6 md:mb-0">Web3-OTC承兑商平台</h1>
+                    </div>
+                    <div class="md:w-1/2 w-full flex flex-col gap-6">
+                        <p class="project-desc mb-0">Web3 OTC承兑商平台，为用户提供安全、便捷的数字资产交易服务。</p>
+                        <div class="tags-container">
+                            <span class="tag">Web3</span>
+                            <span class="tag">UI设计</span>
+                            <span class="tag">交互设计</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目内容 -->
+        <section class="space-y-24" id="projectContent">
+            <!-- 封面图片 - 无内边距 -->
+            <div class="w-full">
+                <img src="https://dkuiux.oss-cn-beijing.aliyuncs.com/DK%E4%BD%9C%E5%93%81%E9%9B%86/OTC/cover.png" alt="OTC承兑商平台 封面" class="w-full h-auto" />
+            </div>
+        </section>
+
+        <!-- 下一个项目 -->
+        <div class="next-project">
+            <a href="./ispruz.html" class="next-project-wrapper">
+                <span class="next-project-label">查看</span>
+                <span class="next-project-title">下一个项目</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- 联系部分 -->
+    <dk-contact></dk-contact>
+
+    <!-- 页脚 -->
+    <dk-footer></dk-footer>
+
+    <script>
+        // 初始化滚动动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-up');
+            
+            // 立即显示首屏元素
+            fadeElements.forEach(element => {
+                if (element.getBoundingClientRect().top < window.innerHeight) {
+                    element.classList.add('show');
+                }
+            });
+
+            // 监听滚动事件
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html> 

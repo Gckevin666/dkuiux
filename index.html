@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DK设计师作品集</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="components/contact.js"></script>
+    <script src="js/threads.js"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-bg-primary to-bg-secondary">
+    <!-- 导航栏 -->
+    <dk-header></dk-header>
+
+    <!-- 英雄区域 -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden px-10">
+        <div class="absolute inset-0">
+            <!-- 动态背景 -->
+            <div id="threadsBackground" class="threads-container"></div>
+            <div class="absolute inset-0 bg-gradient-radial from-glow-color/20 via-transparent to-transparent"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text float-animation fade-up">
+                D.K UI/UE Designer
+            </h1>
+            <p class="text-text-secondary text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed fade-up delay-200">
+                融合跨行业全链路设计、数据驱动优化及AI设计应用，能将前沿用户体验高效转化为可衡量的商业增长。
+            </p>
+            <button onclick="scrollToAbout()" class="btn fade-up delay-300" style="transition: all 0.3s ease">查看更多</button>
+        </div>
+    </section>
+
+    <!-- 视频展示 -->
+    <section class="relative overflow-hidden">
+        <div class="max-w-[2000px] mx-auto bg-bg-tertiary">
+            <div class="video-container">
+                <video autoplay loop muted playsinline poster="./images/video-poster.jpg">
+                    <source src="https://dkuiux.oss-cn-beijing.aliyuncs.com/DK%E4%BD%9C%E5%93%81%E9%9B%86/2022IF%E5%A5%96_iSpruz%20APP/00_iSpruz%E4%BB%8B%E7%BB%8D%E8%A7%86%E9%A2%91.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="py-24 px-10 relative overflow-hidden">
+        <div class="absolute inset-0 flow-effect opacity-10"></div>
+        <div class="max-w-[2000px] mx-auto relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div class="md:w-1/2 fade-up">
+                    <p class="text-text-secondary text-lg">关于我</p>
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="main-heading mb-12 fade-up delay-200">8年经验的iF获奖UI/UX设计师，专注于Web3/AI等前沿领域，旨在打造有商业价值的流畅体验。</h2>
+                    <div class="flex flex-wrap gap-6 fade-up delay-400">
+                        <a href="./about.html" class="btn btn-secondary">
+                            关于我
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <a href="./contact.html" class="btn btn-secondary">
+                            联系我
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精选作品 -->
+    <section class="py-24 px-10">
+        <div class="max-w-[2000px] mx-auto">
+            <div class="flex justify-between items-center mb-12 fade-up">
+                <h2 class="text-4xl font-bold gradient-text">精选作品</h2>
+                <a href="./portfolio.html" class="btn">
+                    查看全部项目
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 fade-up delay-200" id="featuredProjects">
+                <!-- Web3-OTC项目卡片 -->
+                <div class="project-card" onclick="window.location.href='otc.html'">
+                    <div class="image-container">
+                        <img src="https://dkuiux.oss-cn-beijing.aliyuncs.com/DK%E4%BD%9C%E5%93%81%E9%9B%86/OTC/cover.png" alt="Web3-OTC承兑商平台" class="w-full h-full object-cover">
+                    </div>
+                    <div class="content">
+                        <h3 class="project-title">Web3-OTC承兑商平台</h3>
+                        <div class="tags-container">
+                            <span class="tag">Web3</span>
+                            <span class="tag">UI设计</span>
+                            <span class="tag">交互设计</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- iSpruz项目卡片 -->
+                <div class="project-card" onclick="window.location.href='ispruz.html'">
+                    <div class="image-container">
+                        <img src="https://dkuiux.oss-cn-beijing.aliyuncs.com/DK%E4%BD%9C%E5%93%81%E9%9B%86/2022IF%E5%A5%96_iSpruz%20APP/01_%E5%B0%81%E9%9D%A2.png" alt="iF DESIGN AWARD iSpruz APP" class="w-full h-full object-cover">
+                    </div>
+                    <div class="content">
+                        <h3 class="project-title">iF DESIGN AWARD iSpruz APP</h3>
+                        <div class="tags-container">
+                            <span class="tag">APP设计</span>
+                            <span class="tag">UI设计</span>
+                            <span class="tag">动效设计</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- IoT智能家居项目卡片 -->
+                <div class="project-card" onclick="window.location.href='iot.html'">
+                    <div class="image-container">
+                        <img src="https://dkuiux.oss-cn-beijing.aliyuncs.com/DK%E4%BD%9C%E5%93%81%E9%9B%86/Clipboard%20-%202023-06-19%2015.36.39.png" alt="IoT智能家居全屋智控系统" class="w-full h-full object-cover">
+                    </div>
+                    <div class="content">
+                        <h3 class="project-title">IoT智能家居全屋智控系统</h3>
+                        <div class="tags-container">
+                            <span class="tag">IoT</span>
+                            <span class="tag">UI设计</span>
+                            <span class="tag">交互设计</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 微商相册项目卡片 -->
+                <div class="project-card" onclick="window.location.href='wechat.html'">
+                    <div class="image-container">
+                        <img src="https://dkuiux.oss-cn-beijing.aliyuncs.com/DK%E4%BD%9C%E5%93%81%E9%9B%86/Clipboard%20-%202023-06-19%2015.36.16.png" alt="微商相册数据驱动" class="w-full h-full object-cover">
+                    </div>
+                    <div class="content">
+                        <h3 class="project-title">微商相册数据驱动</h3>
+                        <div class="tags-container">
+                            <span class="tag">数据分析</span>
+                            <span class="tag">UI设计</span>
+                            <span class="tag">微信生态</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系部分 -->
+    <dk-contact></dk-contact>
+
+    <!-- 页脚 -->
+    <dk-footer></dk-footer>
+
+    <script>
+        // 初始化动态背景
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('threadsBackground');
+            new Threads(container, {
+                color: [0.4, 0.6, 1.0], // 蓝色调
+                amplitude: 1.2,
+                distance: 0.3,
+                enableMouseInteraction: true
+            });
+
+            // 初始化滚动动画
+            const fadeElements = document.querySelectorAll('.fade-up');
+            
+            // 立即显示首屏元素
+            fadeElements.forEach(element => {
+                if (element.getBoundingClientRect().top < window.innerHeight) {
+                    element.classList.add('show');
+                }
+            });
+
+            // 监听滚动事件
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // 滚动到关于我模块的函数
+        function scrollToAbout() {
+            const aboutSection = document.querySelector('section:nth-of-type(3)');
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html> 
